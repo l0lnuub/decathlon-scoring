@@ -1,6 +1,5 @@
 package decathlon.controller;
 
-import decathlon.domain.DecathlonEvent;
 import decathlon.domain.FinalScore;
 import decathlon.domain.SingleEvent;
 import decathlon.service.ScoringService;
