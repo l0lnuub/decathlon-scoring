@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Decathlon single event score</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href = "css/styles.css" rel = "stylesheet"/>
+
+</head>
+<body>
+
+<form id="input-form" action="#" th:action="@{/scoreByEvent}" th:object="${singleEvent}" method="POST">
+
+    <div class="label-cell">
+    </div>
+    <div class="input-cell">
+        <input type="text" id="hundred" th:field="*{result}"/>
+        <select th:field="*{event}">
+            <option value="100m">100m Run</option>
+            <option value="longJump">Long Jump</option>
+            <option value="shotPut">Shot Put</option>
+            <option value="highJump">High Jump</option>
+            <option value="400m">400m Run</option>
+            <option value="hurdles">110m Hurdles</option>
+            <option value="discus">Discus Throw</option>
+            <option value="pole">Pole Vault</option>
+            <option value="javelin">Javelin Throw</option>
+            <option value="1500m">1500m Run</option>
+        </select>
+    </div>
+
+    <div class="flex-break"></div>
+    <br>
+
+    <div class="label-cell"></div>
+
+    <div class="input-cell">
+        <input type="submit" class="button" value="Calculate"/>
+        <input type="text" id="message-block" th:value="'Score: ' + ${result}"></input>
+    </div>
+
+
+</form>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Decathlon scores</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href = "css/styles.css" rel = "stylesheet"/>
+
+</head>
+<body>
+
+<form id="input-form" action="#" th:action="@{/score}" th:object="${performances}" method="POST">
+
+    <div class="label-cell">
+        <label th:for="hundred" th:text="'100m (in sec)'"></label>
+    </div>
+    <div class="input-cell">
+        <input type="text" id="hundred" th:field="*{hundred}"/>
+        <input th:value="${hundredResult}">
+    </div>
+
+    <div class="flex-break"></div>
+
+    <div class="label-cell">
+        <label th:for="longJump" th:text="'Long jump (in cm)'"></label>
+    </div>
+    <div class="input-cell">
+        <input type="text" id="longJump" th:field="*{longJump}"/>
+        <input th:value="${longJumpResult}">
+    </div>
+
+    <div class="flex-break"></div>
+
+    <div class="label-cell">
+        <label th:for="shotPut" th:text="'Shot put (in m)'"></label>
+    </div>
+    <div class="input-cell">
+        <input id="shotPut" type="text" th:field="*{shotPut}"/>
+        <input th:value="${shotPutResult}">
+    </div>
+
+    <div class="flex-break"></div>
+
+    <div class="label-cell">
+        <label th:for="highJump" th:text="'High jump (in cm)'"></label>
+    </div>
+    <div class="input-cell">
+        <input id="highJump" type="text" th:field="*{highJump}"/>
+        <input th:value="${highJumpResult}">
+    </div>
+
+    <div class="flex-break"></div>
+
+    <div class="label-cell">
+        <label th:for="fourHundred" th:text="'400m (in s)'"></label>
+    </div>
+    <div>
+        <input id="fourHundred" type="text" th:field="*{fourHundred}"/>
+        <input th:value="${fourHundredResult}">
+    </div>
+
+    <div class="flex-break"></div>
+
+    <div class="label-cell">
+        <label th:for="hurdles" th:text="'110m hurdles (in s)'"></label>
+    </div>
+    <div class="input-cell">
+        <input id="hurdles" type="text" th:field="*{hurdles}"/>
+        <input th:value="${hurdlesResult}">
+    </div>
+
+    <div class="flex-break"></div>
+
+    <div class="label-cell">
+        <label th:for="discus" th:text="'Discus (in m)'"></label>
+    </div>
+    <div class="input-cell">
+        <input id="discus" type="text" th:field="*{discus}"/>
+        <input th:value="${discusResult}">
+    </div>
+
+    <div class="flex-break"></div>
+
+    <div class="label-cell">
+        <label th:for="poleVault" th:text="'Pole vault (in cm)'"></label>
+    </div>
+    <div class="input-cell">
+        <input id="poleVault" type="text" th:field="*{poleVault}"/>
+        <input th:value="${poleVaultResult}">
+    </div>
+
+    <div class="label-cell">
+        <label th:for="javelin" th:text="'Javelin (in m)'"></label>
+    </div>
+    <div class="input-cell">
+        <input id="javelin" type="text" th:field="*{javelin}"/>
+        <input th:value="${javelinResult}">
+    </div>
+
+    <div class="label-cell">
+        <label th:for="longRun" th:text="'Long run (in mm:ss or sec)'"></label>
+    </div>
+    <div>
+        <input id="longRun" type="text" th:field="*{longRun}"/>
+        <input th:value="${longRunResult}">
+    </div>
+
+    <div class="flex-break"></div>
+    <br>
+
+    <div class="label-cell"></div>
+
+    <div class="input-cell">
+        <input type="submit" class="button" value="Calculate"/>
+        <input type="text" id="message-block" th:value="'Score: ' + ${result}"></input>
+    </div>
+
+
+</form>
+</body>
+</html>
