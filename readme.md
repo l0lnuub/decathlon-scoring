@@ -48,20 +48,20 @@
         "total": 9000
       }
       ```
-    - http://localhost:9021/api/scoreByEvent
-      - Takes a single event with it's result and returns the score for that event
-      - Takes json body with event name and result. Event name MUST equal one element in
-        DecathlonEvents enum. Json (SingleEvent.class) example: 
-      ```
-      {
-        "event": "highJump", 
-        "result": "199.34"
-      }
-      ```
-      - Returns an int value for points received. Previous example returns:
-      ```
-      798
-      ```
+  - http://localhost:9021/api/scoreByEvent
+    - Takes a single event with it's result and returns the score for that event
+    - Takes json body with event name and result. Event name MUST equal one element in
+      DecathlonEvents enum. Json (SingleEvent.class) example: 
+    ```
+    {
+      "event": "highJump", 
+      "result": "199.34"
+    }
+    ```
+    - Returns an int value for points received. Previous example returns:
+    ```
+    798
+    ```
       
 ### Using web browser
 - Two endpoints:
