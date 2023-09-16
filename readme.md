@@ -14,7 +14,7 @@
 
 ### Using the API
 - There are two endpoints:
-  - http://localhost:9021/api/score
+  - http://localhost:9021/api/scores
     - Takes in all scores and returns score for each event + total score
     - Takes in a json body with all results filled out. Json body is representation of Performances class in application. Example json:
       ```
