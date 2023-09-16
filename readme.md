@@ -2,7 +2,7 @@
 
 ## Overview
     Application is an API for calculating decathlon scores.
-    There are also a simple .html pages to calculate scores.
+    There are also simple .html pages to calculate scores.
 
 ### Prerequisites
 - Java 17 
