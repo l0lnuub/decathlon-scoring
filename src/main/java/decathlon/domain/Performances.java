@@ -19,12 +19,12 @@ public class Performances {
     private String javelin;
     private String longRun;
 
-    public static Double getDoubleValue(String longRun) {
-        if (!StringUtils.isEmpty(longRun) && longRun.contains(":")) {
-            String[] timeSplit = longRun.split(":");
+    public static Double getDoubleValue(String result) {
+        if (!StringUtils.isEmpty(result) && result.contains(":")) {
+            String[] timeSplit = result.split(":");
             return parseDouble(timeSplit[0]) * 60 + parseDouble(timeSplit[1]);
         }
-        return parseDouble(longRun);
+        return parseDouble(result);
 
     }
 
