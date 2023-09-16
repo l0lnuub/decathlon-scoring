@@ -65,6 +65,6 @@
       
 ### Using web browser
 - Two endpoints:
-  - http://localhost:9021/score - For all event scores
+  - http://localhost:9021/scores - For all event scores
   - http://localhost:9021/scoreByEvent - For single event scores
 

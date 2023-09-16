@@ -20,10 +20,10 @@ public class WebController {
 
     private final ScoringService scoringService;
 
-    @GetMapping("/score")
+    @GetMapping("/scores")
     public String scores(Model model) {
         model.addAttribute("performances", performances);
-        return "scores";
+        return "score";
     }
 
     @GetMapping("/scoreByEvent")
@@ -32,11 +32,11 @@ public class WebController {
         return "scoresByEvent";
     }
 
-    @PostMapping("/score")
+    @PostMapping("/scores")
     public String calculateScores(@ModelAttribute("performances") Performances performances, Model model) {
         FinalScore finalScore = scoringService.calculateScores(performances);
         addPointsToAttributes(model, finalScore);
-        return "scores";
+        return "score";
     }
 
     @PostMapping("/scoreByEvent")
