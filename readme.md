@@ -10,7 +10,7 @@
 
 ### Launching application
 - Import gradle files
-- In IntelliJ Idea run DecathlonApplication.java
+- In terminal run ```./gradlew bootRun```
 
 ### Using the API
 - There are two endpoints:
